@@ -47,7 +47,7 @@ class Car(Generic[AgentID]):
     physics: PhysicsObject
     _inverted_physics: PhysicsObject  # Cache for inverted physics
 
-    __slots__ = tuple(__annotations__)
+    __slots__ = ("team_num", "hitbox_type", "ball_touches", "bump_victim_id", "demo_respawn_timer", "wheels_with_contact", "supersonic_time", "boost_amount", "boost_active_time", "handbrake", "is_jumping", "has_jumped", "is_holding_jump", "jump_time", "has_flipped", "has_double_jumped", "air_time_since_jump", "flip_time", "flip_torque", "is_autoflipping", "autoflip_timer", "autoflip_direction", "physics", "_inverted_physics")
 
     exec(create_default_init(__slots__))
 

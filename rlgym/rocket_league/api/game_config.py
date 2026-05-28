@@ -9,6 +9,6 @@ class GameConfig:
     boost_consumption: float
     dodge_deadzone: float  # TODO move to car?
 
-    __slots__ = tuple(__annotations__)
+    __slots__ = ("gravity", "boost_consumption", "dodge_deadzone")
 
     exec(create_default_init(__slots__))

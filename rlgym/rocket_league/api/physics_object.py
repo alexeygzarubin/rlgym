@@ -20,7 +20,7 @@ class PhysicsObject:
     _rotation_mtx: Optional[np.ndarray]
     _euler_angles: Optional[np.ndarray]
 
-    __slots__ = tuple(__annotations__)
+    __slots__ = ("position", "linear_velocity", "angular_velocity", "_quaternion", "_rotation_mtx", "_euler_angles")
 
     exec(create_default_init(__slots__))
 
